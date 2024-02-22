@@ -1,13 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Register from "./pages/Register";
+import Reset from "./pages/Reset";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+
 function App() {
   return (
-    <>
-      <h2 className="bg-orange-300 text-3xl font-bold">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-        molestias distinctio aperiam adipisci ratione laudantium magni quibusdam
-        nam autem? Quod incidunt excepturi quidem voluptas delectus sunt nulla
-        perferendis voluptatibus voluptates.
-      </h2>
-    </>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/reset" element={<Reset />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
